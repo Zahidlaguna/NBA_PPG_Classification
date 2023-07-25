@@ -87,4 +87,13 @@ plt.show()
 print("the position with the highest average field goal percentage are:", position_fg_percentage.idxmax(), "with an average field goal percentage of:", position_fg_percentage.max())
 print("the position with the lowest average field goal percentage are:", position_fg_percentage.idxmin(), "with an average field goal percentage of:", position_fg_percentage.min())
 
+# %%
+# find the position with the highest average points per game
+position_ppg = nba.groupby('Pos')['PTS'].mean()
+print("The average points per game by position is:\n", position_ppg)
+
+# %%
+print("the position with the highest average points per game are:", position_ppg.idxmax(), "with an average points per game of:", position_ppg.max())
+print("the position with the lowest average points per game are:", position_ppg.idxmin(), "with an average points per game of:", position_ppg.min())
+
 
